@@ -27,29 +27,12 @@ const anonim = () => {
           <p>Project</p>
           <h2>Overview</h2>
           <p className="py-2 text-gray-600">
-            It is a DeFi protocol that provides loans using a system that is
-            basically the opposite of going to a bank in almost every way.
-            First, there is no financial institution, no intermediary that
-            oversees or grants loan requests based on creditworthiness.
+            It is a lending and borrowing defi protocol like aave.
           </p>
           <p className="py-2 text-gray-600">
-            Instead, this protocol is a “trustless” network that utilizes smart
-            contracts to execute the loans, thus removing the middlemen. Where a
-            bank would grant a loan in dollars (or another fiat currency), this
-            protocol's loans are in crypto. There are no widely accepted credit
-            checks or scores in the DeFi space, thus users must post collateral
-            in order to get a loan on protocol.
+            It is one of my early projects. To build this I first researched about aave and then I built this in a week from scratch by working all day.
+
           </p>
-          <p className="py-2 text-gray-600">
-            And where a traditional bank would secure a loan using physical
-            collateral (e.g. a home is the collateral for a home loan), protocol
-            relies on liquidity pools. Here, users deposit crypto funds they’re
-            willing to lend into a single pool, a process sometimes called yield
-            farming. Borrowers can then use these pools to take out a loan.
-            Borrowers pay interest on the funds they borrow; lenders receive
-            interest on the money they lend.
-          </p>
-          <p className="py-2 text-gray-600"></p>
           <a
             href="https://github.com/harendra-shakya/anonim"
             target="_blank"

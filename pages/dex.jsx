@@ -34,35 +34,9 @@ const dex = () => {
           </p>
 
           <p className="py-2 text-gray-600">
-            It is a Automated market maker (AMM). It allows digital assets to be
-            traded in a permissionless and automatic way by using liquidity
-            pools rather than a traditional market of buyers and sellers. AMM
-            users supply liquidity pools with crypto tokens, whose prices are
-            determined by a constant mathematical formula. Liquidity pools can
-            be optimized for different purposes, and are proving to be an
-            important instrument in the DeFi ecosystem.
+          As I was curious so to build this I literally decoded uniswap v2 line by line and then built my own version of dex.
           </p>
-          <p className="py-2 text-gray-600">
-            Basically there are two types of users, liquidity providers and
-            traders -
-          </p>
-          <p className="py-2 text-gray-600">
-            Liquidity providers provide liquidity to the pool and in return they
-            get third token that represents the partial ownership of the pool
-            called liquidity token.
-          </p>
-          <p className="py-2 text-gray-600">
-            Traders can swap tokens means then can provide a token and receive
-            another token. The exchange rate is determined by the relative
-            number of tokens in the pool e.g. pool has 8 USDC & 10 DAI then the
-            value of USDC will be high. The pool takes a small percent as a
-            reward for the liquidity pool.
-          </p>
-          <p className="py-2 text-gray-600">
-            When liquidity providers want their assets back they can burn the
-            liquidity token and receive back their assets, including the share
-            of reward.
-          </p>
+        
           <a
             href="https://github.com/harendra-shakya/dex"
             target="_blank"
