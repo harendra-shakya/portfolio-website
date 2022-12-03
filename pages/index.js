@@ -4,6 +4,7 @@ import Main from "../components/Main";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
     return (

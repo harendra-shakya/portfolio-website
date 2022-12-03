@@ -1,21 +1,43 @@
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const Main = () => {
     return (
         <div id="home" className="w-full h-screen text-center">
-            <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
+            <div className=" w-full h-full  flex justify-center items-center  sm:text-center md:text-center lg:text-center ">
+                {/* <div className={ver ? "hidden " : ""}> */}
                 <div>
-                    <p className="uppercase text-sm tracking-widest text-gray-600">
-                        LET&#39;S BUILD SOMETHING TOGETHER
-                    </p>
-                    <h1 className="py-4 text-gray-700">
-                        Hi, I&#39;m <span className="text-[#1E90FF]"> Harendra</span>
-                    </h1>
-                    <h1 className="py-2 text-gray-700">A Full-stack Blockchain Developer</h1>
-                    <p className="py-4 text-gray-600 sm:max-w-[70%] m-auto">
-                        I'm an 18 year old self-taught blockchain developer who just loves to learn
-                    </p>
-                    <div className="flex items-center justify-between max-w-[330px] m-auto py-4"></div>
+                    <div className="z-10">
+                        <div className="font-semibold p-2 m-2 text-slate-500">
+                            Let's give this world a better solution
+                        </div>
+                        <TypeAnimation
+                            className=" font-semibold text-5xl leading-normal mt-0 mb-2 text-slate-800"
+                            sequence={["Hi, I'm Harendra Shakya", 1000]}
+                            speed={5}
+                            wrapper="h2"
+                            repeat={0}
+                        />
+                        <TypeAnimation
+                            className="text-6xl font-md leading-normal mt-0 mb-2 text-sky-800 cursor-pointer sm:mx-8 "
+                            sequence={[
+                                "Full-stack Blockchain Developer",
+                                1000,
+                                "Content Creator",
+                                1000,
+                                "Learner",
+                                1000,
+                            ]}
+                            speed={10}
+                            wrapper="h2"
+                            repeat={0}
+                        />
+
+                        <div className="font-semibold p-2 m-2 text-slate-600">
+                            I'm an 18 year old self-taught blockchain developer who just loves to
+                            learn
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

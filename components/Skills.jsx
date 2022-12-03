@@ -16,7 +16,6 @@ import Graph from "../public/assets/skills/graph.png";
 import Ipfs from "../public/assets/skills/Ipfs.png";
 import Toolbox from "../public/assets/skills/toolbox.png";
 
-
 const Skills = () => {
     return (
         <div id="skills" className="w-full lg:h-screen p-2 pt-36">
@@ -55,7 +54,7 @@ const Skills = () => {
                             </div>
                         </div>
                     </div>
-                   
+
                     <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
                         <div className="grid grid-cols-2 gap-4 justify-center items-center">
                             <div className="m-auto">
@@ -157,7 +156,7 @@ const Skills = () => {
                             </div>
                         </div>
                     </div>
-                   
+
                     <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
                         <div className="grid grid-cols-2 gap-4 justify-center items-center">
                             <div className="m-auto">

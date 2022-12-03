@@ -78,7 +78,7 @@ const fellowswap = () => {
                     <div className="p-2">
                         <p className="text-center font-bold pb-2">Technologies</p>
                         <div className="grid grid-cols-3 md:grid-cols-1 ">
-                        <p className="text-gray-600 py-2 flex items-center">
+                            <p className="text-gray-600 py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Solidity
                             </p>
                             <p className="text-gray-600 py-2 flex items-center">
@@ -105,7 +105,7 @@ const fellowswap = () => {
                             <p className="text-gray-600 py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Chainlink
                             </p>
-                            
+
                             <p className="text-gray-600 py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Next Js
                             </p>
