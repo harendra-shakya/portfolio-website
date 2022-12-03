@@ -29,20 +29,14 @@ const nftMarketplace = () => {
                     <h2>Overview</h2>
 
                     <p className="py-2 text-gray-600">
-                        I built a NFT marketplace. This is one of my first
-                        blockchain project. A platform where users buy and sell
-                        their NFTs. Used moralis as well as graph (for learning
-                        purposes) for indexing data. I built this while learning from Patrick's
-                        youtube course. I was one of the fastest people who
-                        completed this course.
+                        I built a NFT marketplace. This is one of my first blockchain project. A
+                        platform where users buy and sell their NFTs. Used moralis as well as graph
+                        (for learning purposes) for indexing data. I built this while learning from
+                        Patrick's youtube course. I was one of the fastest people who completed
+                        this course.
                     </p>
                     <div>
-                        <Image
-                            className="py-2"
-                            src={twitter}
-                            height={300}
-                            width={250}
-                        />
+                        <Image className="py-2" src={twitter} height={300} width={250} />
                     </div>
 
                     <a
@@ -57,9 +51,7 @@ const nftMarketplace = () => {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <button className="px-8 py-2 mt-4 mr-8">
-                            Live Server
-                        </button>
+                        <button className="px-8 py-2 mt-4 mr-8">Live Server</button>
                     </a>
                     <a
                         href="https://twitter.com/harendrashakya_/status/1539591998302089216?s=20&t=G5xEH59yJjWASe6GeV33OQ"
@@ -71,9 +63,7 @@ const nftMarketplace = () => {
                 </div>
                 <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4">
                     <div className="p-2">
-                        <p className="text-center font-bold pb-2">
-                            Technologies
-                        </p>
+                        <p className="text-center font-bold pb-2">Technologies</p>
                         <div className="grid grid-cols-3 md:grid-cols-1">
                             <p className="text-gray-600 py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Hardhat
@@ -91,8 +81,7 @@ const nftMarketplace = () => {
                                 <RiRadioButtonFill className="pr-1" /> Solidity
                             </p>
                             <p className="text-gray-600 py-2 flex items-center">
-                                <RiRadioButtonFill className="pr-1" />{" "}
-                                Javascript
+                                <RiRadioButtonFill className="pr-1" /> Javascript
                             </p>
                             <p className="text-gray-600 py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Chainlink

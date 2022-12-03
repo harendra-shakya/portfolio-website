@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import anonimImg from "../public/assets/projects/anonim.jpg";
+import curedaoImg from "../public/assets/projects/cureDao.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
 
-const anonim = () => {
+const cureDao = () => {
     return (
         <div className="w-full">
             <div className="w-screen h-[50vh] relative">
@@ -13,12 +13,12 @@ const anonim = () => {
                     className="absolute z-1"
                     layout="fill"
                     objectFit="cover"
-                    src={anonimImg}
+                    src={curedaoImg}
                     alt="/"
                 />
                 <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-                    <h2 className="py-2">Anonim protocol</h2>
-                    <h3>Borrowing and lending protocol</h3>
+                    <h2 className="py-2">Cure Dao</h2>
+                    <h3>Data dao for medical research</h3>
                 </div>
             </div>
 
@@ -27,24 +27,26 @@ const anonim = () => {
                     <p>Project</p>
                     <h2>Overview</h2>
                     <p className="py-2 text-gray-600">
-                        It is a lending and borrowing defi protocol like aave.
+                        Another problem that I tried to solve as I said I like to solve real prolems. This is our hackathon project, our aim was to help universities and
+                        research centers find cures for diseases by providing them with the
+                        necessary datasets from hospitals without compromising user data privacy.
                     </p>
+
                     <p className="py-2 text-gray-600">
-                        It is one of my early projects. To build this I first researched about aave
-                        and then I built this in a week from scratch by working all day.
+                        Cure Dao aggregates sensitive medical data from hospitals, encrypts it, and
+                        uploads it to filecoin network. Approved universities and research centers
+                        will be able to access data for a fee. On-chain access control and
+                        encryption are enabled by leveraging the Medusa contract.
                     </p>
                     <a
-                        href="https://github.com/harendra-shakya/anonim"
+                        href="https://github.com/Shubham0850/cancer-data-dao"
                         target="_blank"
                         rel="noreferrer"
                     >
                         <button className="px-8 py-2 mt-4 mr-8">Code</button>
                     </a>
-                    <a href="https://anonim-ten.vercel.app/" target="_blank" rel="noreferrer">
-                        <button className="px-8 py-2 mt-4 mr-8">Live Server</button>
-                    </a>
                     <a
-                        href="https://www.linkedin.com/posts/harendra-shakya_boom-i-made-it-i-build-a-lending-and-borrowing-activity-6950774885971304448-k0Bm?utm_source=linkedin_share&utm_medium=member_desktop_web"
+                        href="https://www.linkedin.com/posts/harendra-shakya_web3development-blockchaindevelopment-evm-activity-7000454116741189632-shes?utm_source=share&utm_medium=member_desktop"
                         target="_blank"
                         rel="noreferrer"
                     >
@@ -54,7 +56,7 @@ const anonim = () => {
                 <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4">
                     <div className="p-2">
                         <p className="text-center font-bold pb-2">Technologies</p>
-                        <div className="grid grid-cols-3 md:grid-cols-1">
+                        <div className="grid grid-cols-3 md:grid-cols-1 ">
                             <p className="text-gray-600 py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Hardhat
                             </p>
@@ -65,13 +67,16 @@ const anonim = () => {
                                 <RiRadioButtonFill className="pr-1" /> Moralis
                             </p>
                             <p className="text-gray-600 py-2 flex items-center">
+                                <RiRadioButtonFill className="pr-1" /> Filecoin
+                            </p>
+                            <p className="text-gray-600 py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Solidity
                             </p>
                             <p className="text-gray-600 py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Javascript
                             </p>
                             <p className="text-gray-600 py-2 flex items-center">
-                                <RiRadioButtonFill className="pr-1" /> Chainlink
+                                <RiRadioButtonFill className="pr-1" /> Typescript
                             </p>
                             <p className="text-gray-600 py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Next Js
@@ -90,4 +95,4 @@ const anonim = () => {
     );
 };
 
-export default anonim;
+export default cureDao;
