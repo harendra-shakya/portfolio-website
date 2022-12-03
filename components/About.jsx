@@ -26,7 +26,8 @@ const About = () => {
 
                     <p className="py-2 font-bold">What is my motivation to worK?</p>
                     <p className="py-2 text-gray-600">
-                    I'm very passionate about solving problems. I want to solve humanity's problems and want to make a great impact on the world.
+                        I'm very passionate about solving problems. I want to solve humanity's
+                        problems and want to make a great impact on the world that's why I keep learning.
                     </p>
                 </div>
                 <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
