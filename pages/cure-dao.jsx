@@ -27,8 +27,9 @@ const cureDao = () => {
                     <p>Project</p>
                     <h2>Overview</h2>
                     <p className="py-2 text-gray-600">
-                        Another problem that I tried to solve as I said I like to solve real prolems. This is our hackathon project, our aim was to help universities and
-                        research centers find cures for diseases by providing them with the
+                        Another problem that I tried to solve as I said I like to solve real
+                        prolems. This is our hackathon project, our aim was to help universities
+                        and research centers find cures for diseases by providing them with the
                         necessary datasets from hospitals without compromising user data privacy.
                     </p>
 
@@ -57,6 +58,15 @@ const cureDao = () => {
                     <div className="p-2">
                         <p className="text-center font-bold pb-2">Technologies</p>
                         <div className="grid grid-cols-3 md:grid-cols-1 ">
+                        <p className="text-gray-600 py-2 flex items-center">
+                                <RiRadioButtonFill className="pr-1" /> Solidity
+                            </p>
+                            <p className="text-gray-600 py-2 flex items-center">
+                                <RiRadioButtonFill className="pr-1" /> Javascript
+                            </p>
+                            <p className="text-gray-600 py-2 flex items-center">
+                                <RiRadioButtonFill className="pr-1" /> Typescript
+                            </p>
                             <p className="text-gray-600 py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Hardhat
                             </p>
@@ -69,15 +79,7 @@ const cureDao = () => {
                             <p className="text-gray-600 py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Filecoin
                             </p>
-                            <p className="text-gray-600 py-2 flex items-center">
-                                <RiRadioButtonFill className="pr-1" /> Solidity
-                            </p>
-                            <p className="text-gray-600 py-2 flex items-center">
-                                <RiRadioButtonFill className="pr-1" /> Javascript
-                            </p>
-                            <p className="text-gray-600 py-2 flex items-center">
-                                <RiRadioButtonFill className="pr-1" /> Typescript
-                            </p>
+                          
                             <p className="text-gray-600 py-2 flex items-center">
                                 <RiRadioButtonFill className="pr-1" /> Next Js
                             </p>

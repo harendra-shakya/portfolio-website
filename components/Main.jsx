@@ -13,7 +13,7 @@ const Main = () => {
                     </h1>
                     <h1 className="py-2 text-gray-700">A Full-stack Blockchain Developer</h1>
                     <p className="py-4 text-gray-600 sm:max-w-[70%] m-auto">
-                        I'm a 18 year old self-taught blockchain developer who just loves to learn
+                        I'm an 18 year old self-taught blockchain developer who just loves to learn
                     </p>
                     <div className="flex items-center justify-between max-w-[330px] m-auto py-4"></div>
                 </div>
