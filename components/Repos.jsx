@@ -3,7 +3,6 @@ import uniswap from "../public/assets/projects/uniswap.png";
 import security from "../public/assets/projects/security.jpg";
 import gas from "../public/assets/projects/gas.png";
 
-
 import ProjectItem from "./ProjectItem";
 
 const Repos = () => {
@@ -27,7 +26,7 @@ const Repos = () => {
                         projectUrl="/gas-optimization"
                         tech="A repo consists of gas optimization tricks"
                     />
-                     <ProjectItem
+                    <ProjectItem
                         title="Uniswap and Curve Decoded"
                         backgroundImg={uniswap}
                         projectUrl="/uniswap"

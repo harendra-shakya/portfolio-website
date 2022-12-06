@@ -1,10 +1,10 @@
 import React from "react";
-import uniswapv69 from "../public/assets/projects/uniswapv69.jpg";
-import anonim from "../public/assets/projects/anonim.jpg";
-import stark from "../public/assets/projects/stark.jpg";
-import openocean from "../public/assets/projects/openocean.jpg";
+import uniswapv69 from "../public/assets/projects/dex.jpg";
+import anonim from "../public/assets/projects/lending.jpg";
+import stark from "../public/assets/projects/under-collaterize.png";
+import openocean from "../public/assets/projects/nft-marketplace.png";
 import cureDao from "../public/assets/projects/cureDao.png";
-import fellowswap from "../public/assets/projects/fellowswap.png";
+import fellowswap from "../public/assets/projects/p2p.png";
 import easype from "../public/assets/projects/easype.png";
 
 import ProjectItem from "./ProjectItem";
@@ -35,13 +35,13 @@ const Projects = () => {
                         tech="Send and receive payments internationally in seconds with your email address only."
                     />
                     <ProjectItem
-                        title="Full stack Dex"
+                        title="Dex"
                         backgroundImg={uniswapv69}
                         projectUrl="/dex"
                         tech="Decentralized Exchange like uniswap"
                     />
                     <ProjectItem
-                        title="Starl Protocol"
+                        title="Stark Protocol"
                         backgroundImg={stark}
                         projectUrl="/stark"
                         tech="A protocol that allows to borrow without any collateral"

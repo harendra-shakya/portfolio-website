@@ -30,11 +30,13 @@ const uniswap = () => {
                         line by line.
                     </p>
                     <p className="py-2 text-gray-600">
-                        I knew learning how a real protocol works is really hard for beginners so I decided to push all my notes and all resouces with that to study uniswap v2 line by line.
+                        I knew learning how a real protocol works is really hard for beginners so I
+                        decided to push all my notes and all resouces with that to study uniswap v2
+                        line by line.
                     </p>
 
                     <p className="py-2 text-gray-600">
-                       Repo also consists of explanation of curve and uniswap v3 protocol logic.
+                        Repo also consists of explanation of curve and uniswap v3 protocol logic.
                     </p>
                     <a
                         href="https://github.com/harendra-shakya/uniswap-unwrapped"

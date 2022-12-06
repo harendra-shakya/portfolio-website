@@ -27,6 +27,8 @@ const Main = () => {
                                 1000,
                                 "Learner",
                                 1000,
+                                "Smart Contract Engineer",
+                                1000,
                             ]}
                             speed={10}
                             wrapper="h2"
