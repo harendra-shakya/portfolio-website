@@ -6,6 +6,7 @@ import openocean from "../public/assets/projects/nft-marketplace.png";
 import cureDao from "../public/assets/projects/cureDao.png";
 import fellowswap from "../public/assets/projects/p2p.png";
 import easype from "../public/assets/projects/easype.png";
+import safock from "../public/assets/projects/safock.png";
 
 import ProjectItem from "./ProjectItem";
 
@@ -16,6 +17,12 @@ const Projects = () => {
                 <p className="text-xl tracking-widest uppercase text-[#1E90FF]">Projects</p>
                 <h2 className="py-4">What I&apos;ve Built</h2>
                 <div className="grid md:grid-cols-2 gap-8">
+                    <ProjectItem
+                        title="Safock"
+                        backgroundImg={safock}
+                        projectUrl="/safock"
+                        tech="Crypto ETF Platform | Stake ETFs | Get Insurance"
+                    />
                     <ProjectItem
                         title="FellowSwap"
                         backgroundImg={fellowswap}
