@@ -23,7 +23,7 @@ const Main = () => {
                             sequence={[
                                 "Full-stack Blockchain Developer",
                                 1000,
-                                "Architect",
+                                "Content Creator",
                                 1000,
                                 "Learner",
                                 1000,
