@@ -20,7 +20,7 @@ const About = () => {
                     </p>
 
                     <p className="py-2 text-gray-600">
-                        I have studied big protocols like uniswap, save curve, etc., and I am well
+                        I have studied big protocols like uniswap, aave, curve, etc., and I am well
                         aware of best practices, security, and gas optimization
                     </p>
 
