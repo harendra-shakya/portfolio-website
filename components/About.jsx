@@ -28,9 +28,10 @@ const About = () => {
                         I chose not to attend college in order to fully immerse myself in the world
                         of web3 and blockchain development. I am a fast learner and confident in my
                         ability to build anything, even if I don't have a particular skill I can
-                        learn it in no time. I am particularly interested in building projects that
-                        solve real-life problems, such as an under-collateralized lending protocol,
-                        a Data dao for medical research, and a P2P trading platform.
+                        learn it in no time. Coming up with solutions to problems is one of my
+                        passions and I have designed projects to address real-world difficulties,
+                        such as an under-collateralized lending protocol, a Data dao for medical
+                        research, a P2P trading platform etc.
                     </p>
                     <p className="py-2 text-gray-600">
                         Since childhood, I have been searching for something that I could fully
