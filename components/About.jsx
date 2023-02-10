@@ -43,12 +43,7 @@ const About = () => {
                         entrepreneurship, but my current focus is on becoming a leading blockchain
                         developer and building a supportive community.
                     </p>
-                    <p className="py-2 text-gray-600">
-                        I am currently seeking to join a startup team composed of great minds. As
-                        someone who values growth and development, I am drawn to the fast-paced and
-                        dynamic nature of startups. I am looking for opportunities to be a part of
-                        a team that is pushing boundaries and driving innovation.
-                    </p>
+                    <p className="py-2 text-gray-600"></p>
 
                     <p className="py-2 font-bold">What is my motivation to worK?</p>
                     <p className="py-2 text-gray-600">
@@ -58,6 +53,24 @@ const About = () => {
                         things. I am passionate about making a difference and that's what keeps me
                         motivated to continue growing my skills and knowledge.
                     </p>
+
+                    <p className="py-2 font-bold">How I can help you</p>
+                    <p className="py-2 text-gray-600">
+                        1. Build full-stack MVP for you: If you have an idea and want to build an
+                        MVP for that. I'll build it for you.
+                    </p>
+                    <p className="py-2 text-gray-600">
+                        2. Technical Advise/Consultancy: If you're planning to launch a project or
+                        you have an idea then I can Brainstorm with you, help you solve your
+                        problem and advise on your tech stack.
+                    </p>
+                    <p className="py-2 text-gray-600">
+                        3. Also feel free to reach out for any other query :)
+                    </p>
+                    <p className="py-2 text-gray-600"></p>
+                    <Link href="/#contact">
+                        <p className="underline cursor-pointer">Get in touch.</p>
+                    </Link>
                 </div>
                 <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
                     <Image src={AboutImg} className="rounded-xl" alt="/" />

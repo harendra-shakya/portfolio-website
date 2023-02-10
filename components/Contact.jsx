@@ -1,16 +1,22 @@
 import React from "react";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-
+import Link from "next/link";
 const Contact = () => {
     return (
         <div id="contact" className="w-full h-screen text-center">
             <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
                 <div>
-                    <h1 className="py-2 text-gray-700">Get in touch</h1>
-                    <p className="py-4 text-gray-600 sm:max-w-[70%] m-auto">
-                        harendrashakya125@gmail.com
-                    </p>
-                    <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
+                    <h1 className="py-8 text-gray-700">Get in touch</h1>
+                    <Link
+                        className="py-16 font-bold text-gray-600 sm:max-w-[70%] m-auto"
+                        href="mailto:harendrashakya125@gmail.com
+
+"
+                    >
+                        Email Me: harendrashakya125@gmail.com
+                    </Link>
+
+                    <div className="flex items-center justify-between max-w-[330px] m-auto py-8">
                         <a
                             href="https://www.linkedin.com/in/harendra-shakya/"
                             target="_blank"
