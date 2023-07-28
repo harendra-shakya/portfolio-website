@@ -3,20 +3,24 @@ import Link from "next/link";
 import React, { useRef, useEffect } from "react";
 
 const ProjectItem = ({ title, backgroundImg, tech, projectUrl, animate }) => {
+    const className = !animate ? "animate-fade-right" : "animate-fade-left";
+
     const componentRef = useRef(null);
 
-    const handleIntersection = (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-            entry.target.classList.add(!animate ? "animate-fade-right" : "animate-fade-left");
-        }
-    };
-
     useEffect(() => {
+        const handleIntersection = (entries) => {
+            const [entry] = entries;
+            if (entry.isIntersecting) {
+                entry.target.classList.add(className);
+            } else {
+                entry.target.classList.remove(className);
+            }
+        };
+
         const observer = new IntersectionObserver(handleIntersection, {
             root: null,
             rootMargin: "0px",
-            threshold: 0.2, // Adjust this threshold value to control when the animation should trigger.
+            threshold: 0.2,
         });
 
         if (componentRef.current) {

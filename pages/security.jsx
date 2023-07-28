@@ -2,10 +2,17 @@ import Image from "next/image";
 import React from "react";
 import securityImg from "../public/assets/projects/security.jpg";
 import Link from "next/link";
-
+import { Meta } from "../components/Meta";
 const security = () => {
     return (
         <div className="w-full">
+            <Meta
+                title={
+                    "Smart Contract Attack Vectors - List of smart contract attack vectors with explanation"
+                }
+                description={"List of smart contract attack vectors with explanation."}
+                imageUrl="https://portfolio-website-harendra-shakya.vercel.app/assets/ProfilePic.JPG"
+            />
             <div className="w-screen h-[50vh] relative">
                 <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
                 <Image

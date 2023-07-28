@@ -2,10 +2,18 @@ import Image from "next/image";
 import React from "react";
 import gasImg from "../public/assets/projects/gas.png";
 import Link from "next/link";
+import { Meta } from "../components/Meta";
 
 const gasOptimization = () => {
     return (
         <div className="w-full">
+            <Meta
+                title={"Smart Contract Gas Optimization tricks - Harendra Shakya"}
+                description={
+                    "Harendra Shakya is a Full-stack Blockchain Developer specializing in creating cutting-edge, production-level web3 applications."
+                }
+                imageUrl="https://portfolio-website-harendra-shakya.vercel.app/assets/ProfilePic.JPG"
+            />
             <div className="w-screen h-[50vh] relative">
                 <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
                 <Image

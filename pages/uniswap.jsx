@@ -2,10 +2,16 @@ import Image from "next/image";
 import React from "react";
 import uniswapImg from "../public/assets/projects/uniswap.png";
 import Link from "next/link";
+import { Meta } from "../components/Meta";
 
 const uniswap = () => {
     return (
         <div className="w-full">
+            <Meta
+                title={"How Uniswap and Curve works? - Explained uniswap line by line"}
+                description={"How Uniswap and Curve works? - Explained uniswap line by line"}
+                imageUrl="https://portfolio-website-harendra-shakya.vercel.app/assets/ProfilePic.JPG"
+            />
             <div className="w-screen h-[50vh] relative">
                 <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
                 <Image

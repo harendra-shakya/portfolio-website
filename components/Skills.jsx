@@ -22,18 +22,20 @@ import Skill from "./Skill";
 const Skills = () => {
     const componentRef = useRef(null);
 
-    const handleIntersection = (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-            entry.target.classList.add("animate-jump-in");
-        }
-    };
-
     useEffect(() => {
+        const handleIntersection = (entries) => {
+            const [entry] = entries;
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate-jump-in");
+            } else {
+                entry.target.classList.remove("animate-jump-in");
+            }
+        };
+
         const observer = new IntersectionObserver(handleIntersection, {
             root: null,
             rootMargin: "0px",
-            threshold: 0.2, // Adjust this threshold value to control when the animation should trigger.
+            threshold: 0.2,
         });
 
         if (componentRef.current) {
@@ -46,7 +48,6 @@ const Skills = () => {
             }
         };
     }, []);
-
     return (
         <div id="skills" className="w-full lg:h-screen p-2 pt-36">
             <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">

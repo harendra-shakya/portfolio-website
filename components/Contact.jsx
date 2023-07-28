@@ -4,18 +4,20 @@ import Link from "next/link";
 const Contact = () => {
     const componentRef = useRef(null);
 
-    const handleIntersection = (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-up");
-        }
-    };
-
     useEffect(() => {
+        const handleIntersection = (entries) => {
+            const [entry] = entries;
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate-fade-up");
+            } else {
+                entry.target.classList.remove("animate-fade-up");
+            }
+        };
+
         const observer = new IntersectionObserver(handleIntersection, {
             root: null,
             rootMargin: "0px",
-            threshold: 0.2, // Adjust this threshold value to control when the animation should trigger.
+            threshold: 0.2,
         });
 
         if (componentRef.current) {

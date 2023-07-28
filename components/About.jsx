@@ -16,6 +16,12 @@ const About = () => {
                 } else if (entry.target === fadeLeftRef.current) {
                     entry.target.classList.add("animate-fade-left");
                 }
+            } else {
+                if (entry.target === fadeRightRef.current) {
+                    entry.target.classList.remove("animate-fade-right");
+                } else if (entry.target === fadeLeftRef.current) {
+                    entry.target.classList.remove("animate-fade-left");
+                }
             }
         });
     };
@@ -58,12 +64,19 @@ const About = () => {
                     </p>
                     {/* <h2 className="py-4">Experience</h2> */}
                     <p className="py-2 text-gray-600">
-                        - Full-Stack Web3 Applications: I have hands-on experience building
-                        full-stack web3 applications.
+                        - Full-Stack Dapps: I have hands-on experience building production level
+                        full-stack Dapps.
+                    </p>
+                    <p className="py-2 text-gray-600">
+                        - Client Projects: In addition to my personal projects, I have contributed
+                        to the blockchain ecosystem by developing multiple websites and smart
+                        contracts for clients. This experience has allowed me to apply my skills in
+                        real-world scenarios and deliver tailored solutions to meet their specific
+                        needs.
                     </p>
                     <p className="py-2 text-gray-600">
                         - Creator of Innovative Projects: Designed and developed several real-world
-                        projects, including an under- collateralized lending protocol, a Data DAO
+                        projects, including an under-collateralized lending protocol, a Data DAO
                         for medical research, and a P2P trading platform. These projects showcase
                         my problem-solving skills.
                     </p>
@@ -94,7 +107,7 @@ const About = () => {
                         project or have an idea that needs refining, I'm here to brainstorm with
                         you, offer solutions, and provide guidance on your tech stack.
                     </p>
-                    p
+
                     <p className="py-2 text-gray-600">
                         3. Co-founder / Job: If you're seeking a dedicated and skilled co-founder
                         or a passionate team member for your project, I'm open to exploring such
@@ -110,7 +123,7 @@ const About = () => {
                     </Link>
                 </div>
                 <div
-                    className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300"
+                    className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 ease-in duration-300 hover:animate-shake"
                     ref={fadeLeftRef}
                 >
                     <Image src={AboutImg} className="rounded-xl" alt="Harendra Shakya" />

@@ -10,23 +10,6 @@ const Navbar = () => {
     const [shadow, setShadow] = useState(false);
     const [navBg, setNavBg] = useState("#ecf0f3");
     const [linkColor, setLinkColor] = useState("#1f2937");
-    // const [position, setPosition] = useState('fixed')
-    // const router = useRouter();
-
-    // useEffect(() => {
-    //   if (
-    //     router.asPath === '/dex' ||
-    //     router.asPath === '/anonim' ||
-    //     router.asPath === '/nft-marketplace' ||
-    //     router.asPath === '/stark'
-    //   ) {
-    //     setNavBg('transparent');
-    //     setLinkColor('#ecf0f3');
-    //   } else {
-    //     setNavBg('#ecf0f3');
-    //     setLinkColor('#1f2937');
-    //   }
-    // }, [router]);
 
     const handleNav = () => {
         setNav(!nav);
@@ -54,7 +37,6 @@ const Navbar = () => {
         >
             <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
                 <h1 className="text-bold text-xl hover:opacity-[.5]">
-                    {" "}
                     <Link href="/">Harendra Shakya's Portfolio</Link>
                 </h1>
                 <div>
@@ -70,6 +52,9 @@ const Navbar = () => {
                         </li>
                         <li className="ml-10 text-sm uppercase hover:border-b hover:opacity-[.5]">
                             <Link href="/#projects">Projects</Link>
+                        </li>
+                        <li className="ml-10 text-sm uppercase hover:border-b hover:opacity-[.5]">
+                            <Link href="https://harendrashakya.com/blog">Blog</Link>
                         </li>
                         <li className="ml-10 text-sm uppercase hover:border-b hover:opacity-[.5]">
                             <Link href="/#contact">Contact</Link>
