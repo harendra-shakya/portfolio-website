@@ -14,6 +14,8 @@ import Html from "../public/assets/skills/html.png";
 import Css from "../public/assets/skills/css.png";
 import Graph from "../public/assets/skills/graph.png";
 import Ipfs from "../public/assets/skills/Ipfs.png";
+import Firebase from "../public/assets/skills/firebase.png";
+
 import Toolbox from "../public/assets/skills/toolbox.png";
 import Skill from "./Skill";
 
@@ -59,13 +61,15 @@ const Skills = () => {
                     <Skill name="Javascipt" img={Javascipt} />
                     <Skill name="Foundry" img={Foundry} />
                     <Skill name="Hardhat" img={Hardhat} width={80} />
+                    <Skill name="Firebase" img={Firebase} />
+                    <Skill name="Next js" img={NextJS} />
+                    <Skill name="Nodejs" img={Nodejs} width={120} />
+
                     <Skill name="Ethers" img={Ethers} width={80} />
                     <Skill name="Moralis" img={Moralis} />
                     <Skill name="The Graph" img={Graph} />
                     <Skill name="Trail of Bits Toolbox" img={Toolbox} />
                     <Skill name="IPFS/Filecoin" img={Ipfs} />
-                    <Skill name="Next js" img={NextJS} />
-                    <Skill name="Nodejs" img={Nodejs} width={120} />
                     <Skill name="Tailwind" img={Tailwind} />
                     <Skill name="HTML" img={Html} />
                     <Skill name="CSS" img={Css} />
