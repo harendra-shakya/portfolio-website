@@ -7,15 +7,45 @@ import cureDao from "../public/assets/projects/cureDao.png";
 import fellowswap from "../public/assets/projects/p2p.png";
 import easype from "../public/assets/projects/easype.png";
 import safock from "../public/assets/projects/safock.png";
+import { useRef, useEffect } from "react";
 
 import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
+    const componentRef = useRef(null);
+
+    const handleIntersection = (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fade-right");
+        }
+    };
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(handleIntersection, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.2, // Adjust this threshold value to control when the animation should trigger.
+        });
+
+        if (componentRef.current) {
+            observer.observe(componentRef.current);
+        }
+
+        return () => {
+            if (componentRef.current) {
+                observer.unobserve(componentRef.current);
+            }
+        };
+    }, []);
     return (
         <div id="projects" className="w-full">
             <div className="max-w-[1240px] mx-auto px-2 py-16 pt-36">
-                <p className="text-xl tracking-widest uppercase text-[#1E90FF]">Projects</p>
-                <h2 className="py-4">What I&apos;ve Built</h2>
+                <div ref={componentRef}>
+                    <p className="text-xl tracking-widest uppercase text-[#1E90FF]">Projects</p>
+                    <h2 className="py-4">What I&apos;ve Built</h2>
+                </div>
+
                 <div className="grid md:grid-cols-2 gap-8">
                     <ProjectItem
                         title="Safock"
@@ -28,6 +58,7 @@ const Projects = () => {
                         backgroundImg={fellowswap}
                         projectUrl="/fellowswap"
                         tech="P2P trading platform with 0.02% fee"
+                        animate="left"
                     />
                     <ProjectItem
                         title="CureDao"
@@ -40,6 +71,7 @@ const Projects = () => {
                         backgroundImg={easype}
                         projectUrl="/easype"
                         tech="Send and receive payments internationally in seconds with your email address only."
+                        animate="left"
                     />
                     <ProjectItem
                         title="Dex"
@@ -52,6 +84,7 @@ const Projects = () => {
                         backgroundImg={stark}
                         projectUrl="/stark"
                         tech="A protocol that allows to borrow without any collateral"
+                        animate="left"
                     />
                     <ProjectItem
                         title="Anonim Protocol"
@@ -64,6 +97,7 @@ const Projects = () => {
                         backgroundImg={openocean}
                         projectUrl="/nft-marketplace"
                         tech="A nft marketplace"
+                        animate="left"
                     />
                 </div>
             </div>

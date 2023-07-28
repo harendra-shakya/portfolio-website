@@ -1,10 +1,40 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
-const ProjectItem = ({ title, backgroundImg, tech, projectUrl }) => {
+const ProjectItem = ({ title, backgroundImg, tech, projectUrl, animate }) => {
+    const componentRef = useRef(null);
+
+    const handleIntersection = (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+            entry.target.classList.add(!animate ? "animate-fade-right" : "animate-fade-left");
+        }
+    };
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(handleIntersection, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.2, // Adjust this threshold value to control when the animation should trigger.
+        });
+
+        if (componentRef.current) {
+            observer.observe(componentRef.current);
+        }
+
+        return () => {
+            if (componentRef.current) {
+                observer.unobserve(componentRef.current);
+            }
+        };
+    }, []);
+
     return (
-        <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#1E90FF] to-[#00FFFF]">
+        <div
+            ref={componentRef}
+            className={`relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#1E90FF] to-[#00FFFF]`}
+        >
             <Image className="rounded-xl group-hover:opacity-10" src={backgroundImg} alt="/" />
             <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
                 <h3 className="text-2xl text-white tracking-wider text-center">{title}</h3>

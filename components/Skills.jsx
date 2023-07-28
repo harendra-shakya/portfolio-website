@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Hardhat from "../public/assets/skills/hardhat.png";
 import Ethers from "../public/assets/skills/ethers.png";
 import Typescript from "../public/assets/skills/typescript.png";
@@ -15,168 +15,60 @@ import Css from "../public/assets/skills/css.png";
 import Graph from "../public/assets/skills/graph.png";
 import Ipfs from "../public/assets/skills/Ipfs.png";
 import Toolbox from "../public/assets/skills/toolbox.png";
+import Skill from "./Skill";
 
 const Skills = () => {
+    const componentRef = useRef(null);
+
+    const handleIntersection = (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+            entry.target.classList.add("animate-jump-in");
+        }
+    };
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(handleIntersection, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.2, // Adjust this threshold value to control when the animation should trigger.
+        });
+
+        if (componentRef.current) {
+            observer.observe(componentRef.current);
+        }
+
+        return () => {
+            if (componentRef.current) {
+                observer.unobserve(componentRef.current);
+            }
+        };
+    }, []);
+
     return (
         <div id="skills" className="w-full lg:h-screen p-2 pt-36">
             <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-                <p className="text-xl tracking-widest uppercase text-[#1E90FF]">Skills</p>
-                <h2 className="py-4">My Tech Stack</h2>
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Solidity} width="64px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>Solidity</h3>
-                            </div>
-                        </div>
-                    </div>
+                <div ref={componentRef}>
+                    <p className="text-xl tracking-widest uppercase text-[#1E90FF]">Skills</p>
+                    <h2 className="py-4">My Tech Stack</h2>
+                </div>
 
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Typescript} width="64px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>Typescript</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Javascipt} width="64px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>Javascipt</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Foundry} width="64px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>Foundry</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Hardhat} width="80px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>Hardhat</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Ethers} width="80px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>Ethers</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Moralis} width="64px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>Moralis</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Graph} width="64px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>The Graph</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Toolbox} width="64px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>Trail of Bits Toolbox</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Ipfs} width="64px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>IPFS/Filecoin</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={NextJS} width="64px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>Next js</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Nodejs} width="120px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>Nodejs</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Tailwind} width="64px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>Tailwind</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Html} width="64px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>HTML</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                            <div className="m-auto">
-                                <Image src={Css} width="64px" height="64px" alt="/" />
-                            </div>
-                            <div className="flex flex-col items-center justify-center">
-                                <h3>CSS</h3>
-                            </div>
-                        </div>
-                    </div>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 animate-fade-up animate-once animate-ease-linear">
+                    <Skill name="Solidity" img={Solidity} />
+                    <Skill name="Typescript" img={Typescript} />
+                    <Skill name="Javascipt" img={Javascipt} />
+                    <Skill name="Foundry" img={Foundry} />
+                    <Skill name="Hardhat" img={Hardhat} width={80} />
+                    <Skill name="Ethers" img={Ethers} width={80} />
+                    <Skill name="Moralis" img={Moralis} />
+                    <Skill name="The Graph" img={Graph} />
+                    <Skill name="Trail of Bits Toolbox" img={Toolbox} />
+                    <Skill name="IPFS/Filecoin" img={Ipfs} />
+                    <Skill name="Next js" img={NextJS} />
+                    <Skill name="Nodejs" img={Nodejs} width={120} />
+                    <Skill name="Tailwind" img={Tailwind} />
+                    <Skill name="HTML" img={Html} />
+                    <Skill name="CSS" img={Css} />
                 </div>
             </div>
         </div>

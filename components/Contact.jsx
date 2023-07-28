@@ -1,9 +1,35 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 const Contact = () => {
+    const componentRef = useRef(null);
+
+    const handleIntersection = (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fade-up");
+        }
+    };
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(handleIntersection, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.2, // Adjust this threshold value to control when the animation should trigger.
+        });
+
+        if (componentRef.current) {
+            observer.observe(componentRef.current);
+        }
+
+        return () => {
+            if (componentRef.current) {
+                observer.unobserve(componentRef.current);
+            }
+        };
+    }, []);
     return (
-        <div id="contact" className="w-full h-screen text-center">
+        <div id="contact" className="w-full h-screen text-center" ref={componentRef}>
             <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
                 <div>
                     <h1 className="py-8 text-gray-700">Get in touch</h1>
