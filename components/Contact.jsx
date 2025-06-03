@@ -35,14 +35,6 @@ const Contact = () => {
             <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
                 <div>
                     <h1 className="py-8 text-gray-700">Get in touch</h1>
-                    <Link
-                        className="py-16 font-bold text-gray-600 sm:max-w-[70%] m-auto"
-                        href="mailto:harendrashakya125@gmail.com
-
-"
-                    >
-                        Email Me: harendrashakya125@gmail.com
-                    </Link>
 
                     <div className="flex items-center justify-between max-w-[330px] m-auto py-8">
                         <a
