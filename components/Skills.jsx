@@ -20,38 +20,10 @@ import Toolbox from "../public/assets/skills/toolbox.png";
 import Skill from "./Skill";
 
 const Skills = () => {
-    const componentRef = useRef(null);
-
-    useEffect(() => {
-        const handleIntersection = (entries) => {
-            const [entry] = entries;
-            if (entry.isIntersecting) {
-                entry.target.classList.add("animate-jump-in");
-            } else {
-                entry.target.classList.remove("animate-jump-in");
-            }
-        };
-
-        const observer = new IntersectionObserver(handleIntersection, {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.2,
-        });
-
-        if (componentRef.current) {
-            observer.observe(componentRef.current);
-        }
-
-        return () => {
-            if (componentRef.current) {
-                observer.unobserve(componentRef.current);
-            }
-        };
-    }, []);
     return (
         <div id="skills" className="w-full lg:h-screen p-2 pt-36">
             <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-                <div ref={componentRef}>
+                <div>
                     <p className="text-xl tracking-widest uppercase text-[#1E90FF]">Skills</p>
                     <h2 className="py-4">My Tech Stack</h2>
                 </div>

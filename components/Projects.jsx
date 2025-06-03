@@ -12,38 +12,10 @@ import { useRef, useEffect } from "react";
 import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
-    const componentRef = useRef(null);
-
-    useEffect(() => {
-        const handleIntersection = (entries) => {
-            const [entry] = entries;
-            if (entry.isIntersecting) {
-                entry.target.classList.add("animate-fade-right");
-            } else {
-                entry.target.classList.remove("animate-fade-right");
-            }
-        };
-
-        const observer = new IntersectionObserver(handleIntersection, {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.2,
-        });
-
-        if (componentRef.current) {
-            observer.observe(componentRef.current);
-        }
-
-        return () => {
-            if (componentRef.current) {
-                observer.unobserve(componentRef.current);
-            }
-        };
-    }, []);
     return (
         <div id="projects" className="w-full">
             <div className="max-w-[1240px] mx-auto px-2 py-16 pt-36">
-                <div ref={componentRef}>
+                <div>
                     <p className="text-xl tracking-widest uppercase text-[#1E90FF]">Projects</p>
                     <h2 className="py-4">What I&apos;ve Built</h2>
                 </div>

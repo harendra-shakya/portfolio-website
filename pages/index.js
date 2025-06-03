@@ -14,6 +14,7 @@ export default function Home() {
                 title={"Harendra Shakya old portfolio"}
                 description={"Harendra Shakya old portfolio."}
                 // imageUrl="https://portfolio-website-harendra-shakya.vercel.app/assets/ProfilePic.JPG"
+                noIndex={true}
             />
             <About />
             <Skills />

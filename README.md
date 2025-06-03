@@ -1,1 +1,3 @@
-This is my porfolio. [Live Server](https://portfolio-website-nine-dun.vercel.app/)
+Old portfolio repo with annoying animation.
+
+Better visit here [harendra-shakya.github.io](https://harendra-shakya.github.io/).
